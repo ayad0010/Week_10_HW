@@ -2,83 +2,44 @@
 <html>
 
 <head>
-  <title>Multiple Visualisations | An Example</title>
-  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
+  <title>Australian Tourism</title>
   <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
 </head>
 
 <body>
-
-    <!-- pure grid group -->
     <div>
       <div>
-        <h1>Multiple Visualisations</h1>
-        <p>This page demonstrates how you can use pure.css grid for your layout.</p>
+        <h1>Australian Tourism</h1>
+        <p>Trends and Statistics</p>
       </div>
     </div>
-    <!-- end pure grid group -->
-
-    <!-- pure grid group -->
     <div>
       <div>
         <div>
-          <h2>Two Columns Layout</h2>
-          <p>The first column contains text and the second column contains a visualisation.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat sed. </p>
+          <h2>Average visitors per month</h2>
+          <p>This is an interactive graph.Select the months and the horiizontal black line shows the average visitors.
+          Hover over for an exact value.</p>
         </div>
       </div>
       <div>
         <div id="vis1"></div>
       </div>
     </div>
-    <!-- end pure grid group -->
-
-    <!-- pure grid group -->
     <div>
       <div>
         <div>
-          <h2>Three Equal Columns</h2>
-          <p>Using all three columns without merging. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien faucibus et molestie ac feugiat
-            sed. Egestas purus viverra accumsan in nisl. Egestas purus viverra accumsan in nisl.</p>
+          <h2>Global Travellers</h2>
+          <p>This map shows what nationality visitors arriving in Australia July 2024 had.</p>
         </div>
-      </div>
-      <div>
-        <div id="vis2"></div> 
-      </div>
-      <div>
-        <div id="vis3"></div> <!-- Added div for visualization -->
       </div>
 
     </div>
-    <!-- end pure grid group -->
-
-    <!-- pure grid group -->
-    <div>
-      <div>
-      </div>
-      <div>
-        <div>
-          <h2>First and Second Columns Combined</h2>
-          <p>The first and second columns are combined. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Massa sapien
-            faucibus et molestie ac feugiat sed. Egestas purus viverra accumsan in nisl.</p>
-        </div>
-      </div>
-      <div>
-        <div id="vis4"></div> <!-- Added div for visualization -->
-      </div>
-
-    </div>
-    <!-- end pure grid group -->
 
     <div>
       <div>
-        <p>This visualisation is created by <a href="https://fit3179.github.io/Vega-Lite/" target="_blank">Anusha woo  hoo</a>. The datasource is <a href="#" target=" _blank">some data repository online</href>.</p>
+        <p>This visualisation is created by Anusha. The datasource is ABS</p>
       </div>
     </div>
 
