@@ -1,0 +1,70 @@
+{
+      "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+      "title":"Number of visitors by month in 2023",
+  "data": {"url": "https://raw.githubusercontent.com/ayad0010/Week10/refs/heads/main/data.csv"},
+  "layer": [{
+    "params": [{
+      "name": "brush",
+      "select": {"type": "interval", "encodings": ["x"]}
+    }],
+    "mark": "bar",
+    "encoding": {
+      "color": {"value": "orange"},
+      "x": {
+        "timeUnit": "month",
+        "field": "date",
+        "type": "ordinal",
+        "title":"Month"
+      },
+      "y": {
+        "field": "visitors",
+        "type": "quantitative",
+        "title":"Number of visitors"
+      },
+      "opacity": {
+        "condition": {
+          "param": "brush", "value": 2
+        },
+        "value": 0.6
+      },
+      "tooltip": [
+        {"field": "visitors", "type": "quantitative"}
+      ]
+    }
+  }, {
+    "transform": [{
+      "filter": {"param": "brush"}
+    }],
+    "mark": "rule",
+    "encoding": {
+      "y": {
+        "aggregate": "mean",
+        "field": "visitors",
+        "type": "quantitative"
+      },
+      "color": {"value": "black"},
+      "size": {"value": 3}
+    }
+  },{
+    "mark": {
+      "type": "text",
+      "align": "left",
+      "dx": 150,
+      "dy": -170
+    },
+    "encoding": {
+      "x": { 
+        "type": "ordinal",
+        "title": "Month"
+      },
+      "y": {
+        "datum": 520,
+        "type": "quantitative"
+      },
+      "text": {"value": "Most visitors in December"},
+      "color": {"value": "black"}
+    }
+  }],
+
+    "config":{}
+  }
